@@ -148,6 +148,7 @@
                             <th scope="col">Tlf</th>
                             <th scope="col">Solicitud</th>
                             <th scope="col">Renta</th>
+                            <th scope="col">Renta</th>
                         </tr>
                     </thead>
 
