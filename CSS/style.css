@@ -93,3 +93,9 @@ header .responsive .menu li:hover {
     width: 1100px;
     height: 50%;
 }
+
+.public-img img{
+    width: 100%;
+    height: 500px;
+}
+
