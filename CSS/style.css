@@ -94,8 +94,39 @@ header .responsive .menu li:hover {
     height: 50%;
 }
 
-.public-img img{
+.header-public img{
     width: 100%;
     height: 500px;
 }
+
+.header-public  p{
+    position: absolute;
+    color: #cacaca;
+    margin-top: 180px;
+    font-size: 30px;
+}
+
+.header-public small{
+    position: absolute;
+    color: #cacaca;
+    margin-top: 230px;
+    font-size: 15px;
+}
+
+
+.header-public .text-public{
+    display: flex;
+    justify-content: center;
+}
+section {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container-tables{
+    width: 80%;
+}
+
+
 
