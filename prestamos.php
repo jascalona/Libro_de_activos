@@ -148,7 +148,7 @@
                             <th scope="col">Tlf</th>
                             <th scope="col">Solicitud</th>
                             <th scope="col">Renta</th>
-                            <th scope="col">Renta</th>
+                            <th scope="col">Status</th>
                         </tr>
                     </thead>
 
@@ -160,6 +160,18 @@
                             <td>@mdo</td>
                             <td>@mdo</td>
                             <td>@mdo</td>
+                            <td style="display: flex; justify-content: center;">
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <i class='bx bxs-message-dots' style='color:#cacaca'></i>
+                                </a>
+                                <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                </div>
+                                </div>
+                            </td>
+
+
                         </tr>
                     </tbody>
                 </table>
