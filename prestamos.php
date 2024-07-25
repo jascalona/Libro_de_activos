@@ -111,18 +111,34 @@
                     <form>
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Nombre</label>
-                        <input type="text" name="name" class="form-control" id="recipient-name" placeholder="Ingrese su Nombre">
+                        <input type="text" name="name_p" class="form-control" id="recipient-name" placeholder="Ingrese su Nombre">
                     </div>
 
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Apellido</label>
-                        <input type="text" name="surname" class="form-control" id="recipient-name" placeholder="Ingrese su Nombre">
-                    </div
+                        <input type="text" name="surname_p" class="form-control" id="recipient-name" placeholder="Ingrese su Apellido">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Tlf</label>
+                        <input type="text" name="tld_p" class="form-control" id="recipient-name" placeholder="Ingrese su Tlf">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Solicitud</label>
+                        <input type="text" name="solicitud_p" class="form-control" id="recipient-name" placeholder="Ingrese su Solicitud">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Renta</label>
+                        <input type="text" name="renta_p" class="form-control" id="recipient-name" value="12%" placeholder="Ingrese % de renta">
+                    </div>
 
                     <div class="mb-3">
                         <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                        <textarea name="message_p" class="form-control" id="message-text" placeholder="Escribe un Comentario..."></textarea>
                     </div>
+
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -159,7 +175,7 @@
                             <td>Otto</td>
                             <td>@mdo</td>
                             <td>@mdo</td>
-                            <td>@mdo</td>
+                            <td>12%</td>
                             <td style="display: flex; justify-content: center;">
                                 <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <i class='bx bxs-message-dots' style='color:#cacaca'></i>
