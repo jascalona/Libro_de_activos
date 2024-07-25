@@ -1,6 +1,6 @@
 <?php
 
-if (!empty($_POST['btn-p'])) {
+if (!empty($_POST['btn-prestamos'])) {
     
     $name = $_POST['name_p'];
     $surname = $_POST['surname_p'];
