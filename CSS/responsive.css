@@ -1,0 +1,82 @@
+
+
+@media (max-width: 889px) {
+    .container-solicitud .search input{
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 838px) {
+    .container-solicitud .search input{
+        padding-right: 70px;
+    }
+}
+
+@media (max-width: 790px) {
+    .container-solicitud .search input{
+        padding-right: 55px;
+    }
+}
+
+@media (max-width: 765px) {
+    .container-solicitud .search input{
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 739px) {
+    .container-solicitud .search input{
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 723px) {
+    .container-solicitud .search input{
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 705px) {
+    .container-solicitud .search input{
+        padding-right: 5px;
+    }
+}
+
+@media (max-width: 684px) {
+    .container-solicitud .search input{
+        padding-right: 3px;
+        padding: 4px;
+    }
+    .container-modal button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 660px) {
+    .container-solicitud .search input{
+        padding-right: 2px;
+        padding: 4px;
+    }
+    .container-modal button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 625px) {
+    .container-solicitud .search input{
+        padding-right: 50px;
+    }
+
+    .container-solicitud{
+        flex-direction: column;
+    }    
+}   .container-modal {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 520px) {
+    .container-solicitud .search input{
+        padding-right: 15px;
+    }
+}

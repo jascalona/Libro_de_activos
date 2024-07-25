@@ -128,5 +128,24 @@ section {
     width: 80%;
 }
 
+.container-solicitud{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    background: rgb(175, 173, 173);
+    padding: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 7px;
+}
 
+.container-solicitud .search input{
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 130px;
+    background: #292828c7;
+    border: solid 1px #ffffffa9;
+    border-radius: 6px;
+    color: #fff;
+}
 
