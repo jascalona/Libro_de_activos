@@ -1,24 +1,27 @@
 <?php
 
-if (!empty($_POST['btn-prestamos'])) {
-    
-    $name = $_POST['name_p'];
-    $surname = $_POST['surname_p'];
-    $tld = $_POST['tld_p'];
-    $solicitud = $_POST['solicitud_p'];
-    $renta = $_POST['renta_p'];
-    $mesagge = $_POST['message_p'];
-
-    $sql = $Conn->query( " INSERT INTO libro_de_ingresos (name,surname,tlf,solicitud,renta,message) VALUES ('$name_p','$surname_p','$tlf_p','$renta','$message') " );
-        if ($sql == 1) {
-            echo ('<script>alert("Su registro de ha Cargado Exitosamente!")</script>');
-
-        } else {
-            echo ('<script>alert("Ha Ocurrido un error, Comuniquese con el administrador de sistemas")</script>');
-        } 
+if (!empty($_POST['btn-p'])) {
+    if (!empty($_POST['name']) and !empty($_POST['surname']) and !empty($_POST['tlf']) and !empty($_POST['solicitud']) 
+    and !empty($_POST['renta']) and !empty($_POST['message'])) {
         
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $tlf = $_POST['tlf'];
+        $solicitud = $_POST['solicitud'];
+        $renta = $_POST['renta'];
+        $message = $_POST['message'];
+
+
+    $sql = $conexion->query(" INSERT INTO Prestamos (name,surname,tlf,solicitud,renta,message,)VALUES('$name','$surname','$tlf','$solicitud','$renta','$message') ");
+        if ($sql==1) {
+            echo '<script>alert("Su solicitud fue cargada con Exito!")</script>';
+        } else {
+            echo '<script>alert("Ha Ocurrido un Error, Comuniquese con el Administrador de Sistema!")</script>';
+        }
+        
+    } else {
+        echo '<script>alert("Error de registro, debe asegurese de llenar todos los campos")</script>';
     }
-        else {
-            echo ('<script>alert("Error de registros, debe llenar todos los campos")</script>');
-        } 
-     
+}
+
+?>

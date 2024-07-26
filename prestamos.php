@@ -57,7 +57,7 @@
                         <ul class="nav-links">
 
                             <p>Control de Cuentas</p>
-                            <li><a class="dropdown-item" href="./prestamos.html">Prestamos</a></li>
+                            <li><a class="dropdown-item" href="./prestamos.php">Prestamos</a></li>
                             <li><a class="dropdown-item" href="./cuentas_pagadas.html">Cuentas Pagadas</a></li>
                             <li><a class="dropdown-item" href="./pendientes_p_pagar.html">Pendientes por Pagar</a></li>
                             <div class="linear"></div>
@@ -97,7 +97,18 @@
             </div>
 
 
+        
+
             <div class="container-modal">
+
+            <?php
+                include './Controller/conexion.php';
+                include './Controller/prestamos/Uload.php';
+            ?>
+
+            <form action="" method="POST" >
+
+
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Cargar Solicitud</button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -108,46 +119,49 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    
+
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Nombre</label>
-                        <input type="text" name="name_p" class="form-control" id="recipient-name" placeholder="Ingrese su Nombre">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su Nombre">
                     </div>
 
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Apellido</label>
-                        <input type="text" name="surname_p" class="form-control" id="recipient-name" placeholder="Ingrese su Apellido">
+                        <input type="text" name="surname" class="form-control" id="" placeholder="Ingrese su Apellido">
                     </div>
 
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Tlf</label>
-                        <input type="text" name="tld_p" class="form-control" id="recipient-name" placeholder="Ingrese su Tlf">
+                        <input type="text" name="tld" class="form-control" id="" placeholder="Ingrese su Tlf">
                     </div>
 
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Solicitud</label>
-                        <input type="text" name="solicitud_p" class="form-control" id="recipient-name" placeholder="Ingrese su Solicitud">
+                        <input type="text" name="solicitud" class="form-control" id="" placeholder="Ingrese su Solicitud">
                     </div>
 
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Renta</label>
-                        <input type="text" name="renta_p" class="form-control" id="recipient-name" value="12%" placeholder="Ingrese % de renta">
+                        <input type="text" name="renta" class="form-control" id="recipient-name" value="12%" placeholder="Ingrese % de renta">
                     </div>
 
                     <div class="mb-3">
                         <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea name="message_p" class="form-control" id="message-text" placeholder="Escribe un Comentario..."></textarea>
+                        <input type="text" name="message" placeholder="mesage">
                     </div>
 
-                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" name="btn-p" class="btn btn-primary">Cargar solicitud</button>
+
                 </div>
                 </div>
             </div>
             </div>
+        </form>
+
         </div>
         </div>
 
@@ -158,7 +172,6 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th scope="col">id</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido</th>
                             <th scope="col">Tlf</th>
@@ -169,23 +182,34 @@
                     </thead>
 
                     <tbody>
+                        <?php
+                            include './Controller/conexion.php';
+
+                            $sql=$conexion->query( "SELECT *FROM Prestamos");
+                            while($datos = $sql->fetch_object()){
+                                ?>
+                            
+
                         <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>12%</td>
+                            <td><?= $datos->name?></td>
+                            <td><?= $datos->surname?></td>
+                            <td><?= $datos->tlf?></td>
+                            <td><?= $datos->solicitud?></td>
+                            <td><?= $datos->renta?></td>
                             <td style="display: flex; justify-content: center;">
                                 <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <i class='bx bxs-message-dots' style='color:#cacaca'></i>
                                 </a>
                                 <div class="collapse" id="collapseExample">
                                 <div class="card card-body">
-                                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                <?= $datos->message?>
                                 </div>
                                 </div>
                             </td>
+
+                        <?php
+                        }
+                        ?>
 
 
                         </tr>
