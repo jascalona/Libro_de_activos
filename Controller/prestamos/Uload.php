@@ -1,7 +1,6 @@
 <?php
 
 if (!empty($_POST['btn-p'])) {
-    
     if (!empty($_POST['name']) and !empty($_POST['surname']) and !empty($_POST['tlf']) and !empty($_POST['solicitud']) 
     and !empty($_POST['renta']) and !empty($_POST['message'])) {
         
@@ -13,7 +12,7 @@ if (!empty($_POST['btn-p'])) {
         $message = $_POST['message'];
 
 
-    $sql = $conexion->query(" INSERT INTO Prestamos (name,surname,tlf,solicitud,renta,message,)VALUES('$name','$surname','$tlf','$solicitud','$renta','$message') ");
+    $sql = $conexion->query(" INSERT INTO prest (name,surname,tlf,solicitud,renta,message,)VALUES('$name','$surname','$tlf','$solicitud','$renta','$message') ");
         if ($sql==1) {
             echo '<script>alert("Su solicitud fue cargada con Exito!")</script>';
         } else {

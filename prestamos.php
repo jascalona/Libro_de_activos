@@ -186,7 +186,7 @@
                         <?php
                             include './Controller/conexion.php';
 
-                            $sql=$conexion->query( "SELECT *FROM Prestamos");
+                            $sql=$conexion->query( "SELECT *FROM prest");
                             while($datos = $sql->fetch_object()){
                                 ?>
                             
