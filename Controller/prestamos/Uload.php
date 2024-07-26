@@ -1,6 +1,7 @@
 <?php
 
 if (!empty($_POST['btn-p'])) {
+    
     if (!empty($_POST['name']) and !empty($_POST['surname']) and !empty($_POST['tlf']) and !empty($_POST['solicitud']) 
     and !empty($_POST['renta']) and !empty($_POST['message'])) {
         

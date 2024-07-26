@@ -106,61 +106,62 @@
                 include './Controller/prestamos/Uload.php';
             ?>
 
-            <form action="" method="POST" >
+            <form action="" method="POST">
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Registro de Personal</button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Registro</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
 
 
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Cargar Solicitud</button>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Nombre</label>
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su Nombre" >
+                                    </div>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Solicitud de Prestamo</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Apellido</label>
+                                        <input type="text" name="surname" class="form-control" id="surname" placeholder="Ingrese su Apellido" >
+                                    </div>
 
-                    <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Nombre</label>
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su Nombre">
-                    </div>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Telefono</label>
+                                        <input type="text" name="tlf" class="form-control" id="customer" placeholder="Ingrese nombre su tlf">
+                                    </div>
 
-                    <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Apellido</label>
-                        <input type="text" name="surname" class="form-control" id="" placeholder="Ingrese su Apellido">
-                    </div>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Solicitud</label>
+                                        <input type="text" name="solicitud" class="form-control" id="email" placeholder="Ingrese el monto solicitado">
+                                    </div>
 
-                    <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Tlf</label>
-                        <input type="text" name="tld" class="form-control" id="" placeholder="Ingrese su Tlf">
-                    </div>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Renta</label>
+                                        <input type="text" name="renta" class="form-control" id="renta" placeholder="Ingrese su el % sobre renta">
+                                    </div>
 
-                    <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Solicitud</label>
-                        <input type="text" name="solicitud" class="form-control" id="" placeholder="Ingrese su Solicitud">
-                    </div>
 
-                    <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Renta</label>
-                        <input type="text" name="renta" class="form-control" id="recipient-name" value="12%" placeholder="Ingrese % de renta">
-                    </div>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Comentarios</label>
+                                        <input type="text" name="message" class="form-control" id="location" placeholder="Escriba aqui">
+                                    </div>
 
-                    <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Message:</label>
-                        <input type="text" name="message" placeholder="mesage">
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" name="btn-p" class="btn btn-primary">Cargar solicitud</button>
-
-                </div>
-                </div>
-            </div>
-            </div>
-        </form>
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" name="btn-p" class="btn btn-primary" value="submit">Cargar Solicitud</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        </form>
+        
 
         </div>
         </div>
@@ -202,7 +203,7 @@
                                 </a>
                                 <div class="collapse" id="collapseExample">
                                 <div class="card card-body">
-                                <?= $datos->message?>
+                                    <?= $datos->message?>
                                 </div>
                                 </div>
                             </td>
