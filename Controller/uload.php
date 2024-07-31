@@ -13,13 +13,14 @@ if (!empty($_POST['btn-p'])) {
 
     $sql = $conexion->query("  INSERT INTO prest (name,surname,tlf,solicitud,renta,message,)VALUES('$name','$surname','$tlf','$solicitud','$renta','$message') ");
         if ($sql==1) {
-            echo '<div class="alert alert-success" role="alert">Su Asistencia fue Cargada con Exito!</div>';
+            echo '<script>alert("Su REgistro fue Cargado con Exito!")</script>';
         } else {
-            echo '<div class="alert alert-danger" role="danger">Error de Conexion, Comuniquese con el Administrador de Sistema!</div>';
+            echo '<script>alert("Ha Ocurrido un error de Conexion, comuniquese con el administrador de sistemas!")</script>';
         }
     
     } else {
-        echo '<div class="alert alert-warning" role="warning">Debe llenar los Campos Vacios</div>';
+        echo '<script>alert("Asegurese de llenar todos los campos!")</script>';
+
     }
 }
 
