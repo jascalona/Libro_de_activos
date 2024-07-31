@@ -1,14 +1,16 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "libro_de_ingresos";
+
+$server = 'localhost';
+$user = 'root';
+$password = '';
+$db = 'libro_activo';
+
 // Create connection
-$conexion = mysqli_connect($servername, $username, $password, $db);
+$conexion = mysqli_connect($server, $user, $password, $db);
 
 // Check connection
 if (!$conexion) {
-  die('<script>alert("Conexion Fallida")</script>' . mysqli_connect_error());
+  die ('<script>alert("Conexion Fallida: !")</script>' . mysqli_connect_error());
+} else{
+  //  die ('<script>alert("Conexion Exitosa!")</script>');
 }
-// die ('<script>alert("Su Conexion fue EXitosa!")</script>');
-?>

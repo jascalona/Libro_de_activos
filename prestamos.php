@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,10 +103,11 @@
 
             <?php
                 include './Controller/conexion.php';
-                include './Controller/prestamos/Uload.php';
+                include './Controller/uload.php';
+
             ?>
 
-            <form action="" method="POST">
+            <form action="./Controller/uload.php" method="POST">
 
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Registro de Personal</button>
 
@@ -184,6 +185,7 @@
 
                     <tbody>
                         <?php
+
                             include './Controller/conexion.php';
 
                             $sql=$conexion->query( "SELECT *FROM prest");

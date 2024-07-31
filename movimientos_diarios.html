@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro de Compras</title>
+    <title>Prestamos</title>
 
     <!-- STYLE & FRAMEWORKS CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/responsive.css">
     <link rel="stylesheet" href="./CSS/Framework/Bootstrap.css">
     <!-- STYLE & FRAMEWORKS CSS -->
 
@@ -23,58 +24,197 @@
 </head>
 <body>
     
-      <header class="header">
-        <div class="logo">
-            <a href="./index.html"><p>LDA</p></a>
+        <header class="header">
+            <div class="logo">
+                <a href="./index.html"><p>LDA</p></a>
+            </div>
+
+            
+
+            <div class="responsive">
+                
+                <div class="setting">
+                    <a href=""><i class='bx bx-cog'></i></a>
+                </div>
+
+                <a class="" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <i class='bx bx-home-smile'></i>
+                </a>
+        
+                <div class="menu">
+                
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <i style="color: #cacaca;" class='bx bx-book-reader'></i>
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Libro de Ingresos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                    <div class="text">
+                        <i style="color: rgb(4, 4, 85);">Menu Consulta de Ingresos Diarios</i>
+                    </div>
+
+                        <ul class="nav-links">
+
+                            <p>Control de Cuentas</p>
+                            <li><a class="dropdown-item" href="./prestamos.php">Prestamos</a></li>
+                            <li><a class="dropdown-item" href="./cuentas_pagadas.html">Cuentas Pagadas</a></li>
+                            <li><a class="dropdown-item" href="./pendientes_p_pagar.html">Pendientes por Pagar</a></li>
+                            <div class="linear"></div>
+
+                            <p>Status</p>
+                            <li><a class="dropdown-item" href="./movimientos_diarios.html">Movimientos Diarios</a></li>
+                            <li><a class="dropdown-item" href="./movimientos_mensuales.html">Movimientos Mensuales</a></li>
+                            <div class="linear"></div>
+
+                            <p>Activos</p>    
+                            <li><a class="dropdown-item" href="./corriente.html">Corriente</a></li>
+                            <li><a class="dropdown-item" href="./no_corriente.html">NO Corriente</a></li>
+
+                        </ul>
+                    </div>
+                    </div>
+                </div>                
+                </div>
+
+                </div>
+        </header>
+
+
+        <div class="header-public">
+            <div class="text-public">
+                <p>Solicitud & Generador de Prestamos</p>
+                <small><i>Libro de Ingresos</i></small>
+            </div>
+            <img src="https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg" alt="">
         </div>
+
+
+        <div class="container-solicitud">
+
+            <div class="search">
+                <input type="text" placeholder="Escribe aqui...">
+            </div>
+
 
         
 
-        <div class="responsive">
-            
-            <div class="setting">
-                <a href=""><i class='bx bx-cog'></i></a>
+            <div class="container-modal">
+
+            <?php
+                include './Controller/conexion.php';
+                include './Controller/prestamos/Uload.php';
+            ?>
+
+            <form action="" method="POST">
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Registro de Personal</button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Registro</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Nombre</label>
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su Nombre" >
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Apellido</label>
+                                        <input type="text" name="surname" class="form-control" id="surname" placeholder="Ingrese su Apellido" >
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Telefono</label>
+                                        <input type="text" name="tlf" class="form-control" id="customer" placeholder="Ingrese nombre su tlf">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Solicitud</label>
+                                        <input type="text" name="solicitud" class="form-control" id="email" placeholder="Ingrese el monto solicitado">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Renta</label>
+                                        <input type="text" name="renta" class="form-control" id="renta" placeholder="Ingrese su el % sobre renta">
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Comentarios</label>
+                                        <input type="text" name="message" class="form-control" id="location" placeholder="Escriba aqui">
+                                    </div>
+
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" name="btn-p" class="btn btn-primary" value="submit">Cargar Solicitud</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        </form>
+        
+
+        </div>
+        </div>
+
+
+
+        <section>
+            <div class="container-tables">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Tlf</th>
+                            <th scope="col">Solicitud</th>
+                            <th scope="col">Renta</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <?php
+                            include './Controller/conexion.php';
+
+                            $sql=$conexion->query( "SELECT *FROM prest");
+                            while($datos = $sql->fetch_object()){
+                                ?>
+                            
+
+                        <tr>
+                            <td><?= $datos->name?></td>
+                            <td><?= $datos->surname?></td>
+                            <td><?= $datos->tlf?></td>
+                            <td><?= $datos->solicitud?></td>
+                            <td><?= $datos->renta?></td>
+                            <td style="display: flex; justify-content: center;">
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <i class='bx bxs-message-dots' style='color:#cacaca'></i>
+                                </a>
+                                <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    <?= $datos->message?>
+                                </div>
+                                </div>
+                            </td>
+
+                        <?php
+                        }
+                        ?>
+
+
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <a class="" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                <i class='bx bx-home-smile'></i>
-            </a>
-      
-            <div class="menu">
-              
-              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <i style="color: #cacaca;" class='bx bx-book-reader'></i>
-                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Libro de Ingresos</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <div class="text">
-                    <i style="color: rgb(4, 4, 85);">Menu Consulta de Ingresos Diarios</i>
-                  </div>
-
-                    <ul class="nav-links">
-
-                        <p>Control de Cuentas</p>
-                        <li><a class="dropdown-item" href="./prestamos.html">Prestamos</a></li>
-                        <li><a class="dropdown-item" href="./cuentas_pagadas.html">Cuentas Pagadas</a></li>
-                        <li><a class="dropdown-item" href="./pendientes_p_pagar.html">Pendientes por Pagar</a></li>
-                        <div class="linear"></div>
-
-                        <p>Status</p>
-                        <li><a class="dropdown-item" href="./movimientos_diarios.html">Movimientos Diarios</a></li>
-                        <li><a class="dropdown-item" href="./movimientos_mensuales.html">Movimientos Mensuales</a></li>
-                        <div class="linear"></div>
-
-                        <p>Activos</p>    
-                        <li><a class="dropdown-item" href="./corriente.html">Corriente</a></li>
-                        <li><a class="dropdown-item" href="./no_corriente.html">NO Corriente</a></li>
-
-                    </ul>
-                  </div>
-                </div>
-              </div>                
-            </div>
-
-            </div>
-    </header>
+        </section>
