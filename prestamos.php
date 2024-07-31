@@ -103,7 +103,8 @@
 
             <?php
                 include './Controller/conexion.php';
-                include './Controller/uload.php';
+                include './Controller/prestamos/uload.php';
+                include './Controller/prestamos/Drop.php';
 
             ?>
 
@@ -173,13 +174,14 @@
             <div class="container-tables">
                 <table class="table table-bordered">
                     <thead>
-                        <tr>
+                        <tr class="text-center">
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido</th>
                             <th scope="col">Tlf</th>
                             <th scope="col">Solicitud</th>
                             <th scope="col">Renta</th>
                             <th scope="col">Status</th>
+                            <th scope="col"><i class='bx bx-trash-alt'></i></th>
                         </tr>
                     </thead>
 
@@ -193,7 +195,7 @@
                                 ?>
                             
 
-                        <tr>
+                        <tr class="text-center">
                             <td><?= $datos->name?></td>
                             <td><?= $datos->surname?></td>
                             <td><?= $datos->tlf?></td>
@@ -208,6 +210,10 @@
                                     <?= $datos->message?>
                                 </div>
                                 </div>
+                            </td>
+
+                            <td>
+                                <a href="prestamos.php?id=<?= $datos->id?>"><i class='bx bx-trash-alt'></i></a>
                             </td>
 
                         <?php
