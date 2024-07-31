@@ -11,7 +11,7 @@ if (!empty($_POST['btn-p'])) {
         $renta = $_POST['renta'];
         $message = $_POST['message'];
 
-    $sql = $conexion->query("  INSERT INTO prest (name,surname,tlf,solicitud,renta,message,)VALUES('$name','$surname','$tlf','$solicitud','$renta','$message') ");
+        $sql = $conexion->query(" INSERT INTO prest (name,surname,tlf,solicitud,renta,message)VALUES('$name','$surname','$tlf','$solicitud','$renta','$message') ");
         if ($sql==1) {
             echo '<script>alert("Su REgistro fue Cargado con Exito!")</script>';
         } else {
@@ -24,6 +24,3 @@ if (!empty($_POST['btn-p'])) {
     }
 }
 
-mysqli_close($conexion)
-
-?>

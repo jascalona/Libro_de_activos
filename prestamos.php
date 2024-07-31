@@ -107,7 +107,7 @@
 
             ?>
 
-            <form action="./Controller/uload.php" method="POST">
+            <form action="" method="POST">
 
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Registro de Personal</button>
 
