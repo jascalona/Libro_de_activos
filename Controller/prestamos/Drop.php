@@ -1,7 +1,7 @@
 <?php
 
-if (!empty($_POST['id'])) {
-    $id = $_POST['id'];
+if (!empty($_GET['id'])) {
+    $id = $_GET['id'];
 
     $sql=$conexion->query(" DELETE FROM prest WHERE $id=id ");
     if ($sql==1) {

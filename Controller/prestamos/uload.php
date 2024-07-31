@@ -13,7 +13,7 @@ if (!empty($_POST['btn-p'])) {
 
         $sql = $conexion->query(" INSERT INTO prest (name,surname,tlf,solicitud,renta,message)VALUES('$name','$surname','$tlf','$solicitud','$renta','$message') ");
         if ($sql==1) {
-            echo '<script>alert("Su REgistro fue Cargado con Exito!")</script>';
+            echo '<script>alert("Su Registro fue Cargado con Exito!")</script>';
         } else {
             echo '<script>alert("Ha Ocurrido un error de Conexion, comuniquese con el administrador de sistemas!")</script>';
         }
