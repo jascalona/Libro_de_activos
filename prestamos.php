@@ -139,7 +139,7 @@
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Solicitud</label>
-                                        <input type="text" name="solicitud" class="form-control" id="email" placeholder="Ingrese el monto solicitado">
+                                        <input type="number" name="solicitud" class="form-control" id="email" placeholder="Ingrese el monto solicitado">
                                     </div>
 
                                     <div class="mb-3">
@@ -149,7 +149,22 @@
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Renta</label>
-                                        <input type="text" name="renta" class="form-control" id="renta" value="12" placeholder="Ingrese su el % sobre renta">
+                                        <input type="number" name="renta" class="form-control" id="renta" value="12" placeholder="Ingrese su el % sobre renta">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Total a Pagar</label>
+                                        <input type="number" name="total_a_p" class="form-control" id="total_a_p" placeholder="">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Prima</label>
+                                        <input type="number" name="prima" class="form-control" id="prima" placeholder="Indique su prima base...">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Cuotas</label>
+                                        <input type="number" name="cuotas" class="form-control" id="cuotas" placeholder="Indique el numero de cuotas...">
                                     </div>
 
                                     <div class="mb-3">
@@ -185,8 +200,10 @@
                             <th scope="col">Solicitud</th>
                             <th scope="col">Fecha</th>
                             <th scope="col">Renta</th>
-                            <th scope="col">Total Pagado</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">Total a Pagar</th>
+                            <th scope="col">Prima</th>
+                            <th scope="col">Cuotas</th>
+                            <th scope="col">Comentarios</th>
                             <th scope="col"><i class='bx bx-trash-alt'></i></th>
                         </tr>
                     </thead>
@@ -209,6 +226,10 @@
                             <td><?= $datos->date?></td>
                             <td><?= $datos->renta?></td>
                             <td><?= $datos->total_a_p?></td>
+                            <td><?= $datos->prima?></td>
+                            <td><?= $datos->cuotas?></td>
+
+
                             <td style="display: flex; justify-content: center;">
                                 <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <i class='bx bxs-message-dots' style='color:#cacaca'></i>

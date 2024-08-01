@@ -100,7 +100,9 @@
                             <th scope="col">Fecha</th>
                             <th scope="col">Renta</th>
                             <th scope="col">Total a Pagar</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">Monto Primario</th>
+                            <th scope="col">Cantidad de Cuotas</th>
+                            <th scope="col">Comentarios</th>
                             <th scope="col"><i class='bx bx-trash-alt'></i></th>
                         </tr>
                     </thead>
@@ -123,6 +125,7 @@
                             <td><?= $datos->date?></td>
                             <td><?= $datos->renta?></td>
                             <td><?= $datos->total_p?></td>
+                            
                             <td style="display: flex; justify-content: center;">
                                 <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <i class='bx bxs-message-dots' style='color:#cacaca'></i>
