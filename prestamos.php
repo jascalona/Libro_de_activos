@@ -18,6 +18,7 @@
 
     <!-- BoxIcons -->
      <script src="./JS/Framewrok.js"></script>
+     <script src="./JS/calculo_p.js"></script>
     <!-- BoxIcons -->
 
 
@@ -139,22 +140,22 @@
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Solicitud</label>
-                                        <input type="number" name="solicitud" class="form-control" id="email" placeholder="Ingrese el monto solicitado">
+                                        <input type="number" name="solicitud" class="form-control" value="" id="v_solicitud" oninput="calculo()" placeholder="Ingrese el monto solicitado">
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Fecha de Solicitud</label>
-                                        <input type="date" name="date" class="form-control" id="date" value="12">
+                                        <input type="date" name="date" class="form-control" id="date">
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Renta</label>
-                                        <input type="number" name="renta" class="form-control" id="renta" value="12" placeholder="Ingrese su el % sobre renta">
+                                        <input type="number" name="renta" class="form-control" id="v_renta" value="12" oninput="calculo()" placeholder="Ingrese su el % sobre renta">
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Total a Pagar</label>
-                                        <input type="number" name="total_a_p" class="form-control" id="total_a_p" placeholder="">
+                                        <input type="number" name="total_a_p" class="form-control" id="v_total_a_p" value="">
                                     </div>
 
                                     <div class="mb-3">
