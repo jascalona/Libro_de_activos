@@ -134,7 +134,7 @@
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Telefono</label>
-                                        <input type="text" name="tlf" class="form-control" id="customer" placeholder="Ingrese nombre su tlf">
+                                        <input type="text" name="tlf" class="form-control" id="customer" placeholder="Ingrese numero de Telefono">
                                     </div>
 
                                     <div class="mb-3">
@@ -143,14 +143,18 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Renta</label>
-                                        <input type="text" name="renta" class="form-control" id="renta" placeholder="Ingrese su el % sobre renta">
+                                        <label for="recipient-name" class="col-form-label">Fecha de Solicitud</label>
+                                        <input type="date" name="date" class="form-control" id="date" value="12">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Renta</label>
+                                        <input type="text" name="renta" class="form-control" id="renta" value="12" placeholder="Ingrese su el % sobre renta">
+                                    </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Comentarios</label>
-                                        <input type="text" name="message" class="form-control" id="location" placeholder="Escriba aqui">
+                                        <input type="text" name="message" class="form-control" id="location" placeholder="Escriba aqui...">
                                     </div>
 
                                 
@@ -179,6 +183,7 @@
                             <th scope="col">Apellido</th>
                             <th scope="col">Tlf</th>
                             <th scope="col">Solicitud</th>
+                            <th scope="col">Fecha</th>
                             <th scope="col">Renta</th>
                             <th scope="col">Status</th>
                             <th scope="col"><i class='bx bx-trash-alt'></i></th>
@@ -200,6 +205,7 @@
                             <td><?= $datos->surname?></td>
                             <td><?= $datos->tlf?></td>
                             <td><?= $datos->solicitud?></td>
+                            <td><?= $datos->date?></td>
                             <td><?= $datos->renta?></td>
                             <td style="display: flex; justify-content: center;">
                                 <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">

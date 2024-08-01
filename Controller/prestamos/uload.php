@@ -1,17 +1,18 @@
 <?php
 
 if (!empty($_POST['btn-p'])) {
-    if (!empty($_POST['name']) and !empty($_POST['surname']) and !empty($_POST['tlf']) and !empty($_POST['solicitud']) 
+    if (!empty($_POST['name']) and !empty($_POST['surname']) and !empty($_POST['tlf']) and !empty($_POST['solicitud']) and !empty($_POST['date'])
     and !empty($_POST['renta']) and !empty($_POST['message'])) {
 
         $name = $_POST['name'];
         $surname = $_POST['surname'];
         $tlf = $_POST['tlf'];
         $solicitud = $_POST['solicitud'];
+        $date = $_POST['date'];
         $renta = $_POST['renta'];
         $message = $_POST['message'];
 
-        $sql = $conexion->query(" INSERT INTO prest (name,surname,tlf,solicitud,renta,message)VALUES('$name','$surname','$tlf','$solicitud','$renta','$message') ");
+        $sql = $conexion->query(" INSERT INTO prest (name,surname,tlf,solicitud,date,renta,message)VALUES('$name','$surname','$tlf','$solicitud','$date','$renta','$message') ");
         if ($sql==1) {
             echo '<script>alert("Su Registro fue Cargado con Exito!")</script>';
         } else {
