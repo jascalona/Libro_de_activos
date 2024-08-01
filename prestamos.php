@@ -58,7 +58,7 @@
 
                             <p>Control de Cuentas</p>
                             <li><a class="dropdown-item" href="./prestamos.php">Prestamos</a></li>
-                            <li><a class="dropdown-item" href="./cuentas_pagadas.html">Cuentas Pagadas</a></li>
+                            <li><a class="dropdown-item" href="./cuentas_pagadas.php">Cuentas Pagadas</a></li>
                             <li><a class="dropdown-item" href="./pendientes_p_pagar.html">Pendientes por Pagar</a></li>
                             <div class="linear"></div>
 
@@ -185,6 +185,7 @@
                             <th scope="col">Solicitud</th>
                             <th scope="col">Fecha</th>
                             <th scope="col">Renta</th>
+                            <th scope="col">Total Pagado</th>
                             <th scope="col">Status</th>
                             <th scope="col"><i class='bx bx-trash-alt'></i></th>
                         </tr>
@@ -207,6 +208,7 @@
                             <td><?= $datos->solicitud?></td>
                             <td><?= $datos->date?></td>
                             <td><?= $datos->renta?></td>
+                            <td><?= $datos->total_a_p?></td>
                             <td style="display: flex; justify-content: center;">
                                 <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <i class='bx bxs-message-dots' style='color:#cacaca'></i>
