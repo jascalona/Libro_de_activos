@@ -58,7 +58,8 @@
                         <ul class="nav-links">
 
                             <p>Control de Cuentas</p>
-                            <li><a class="dropdown-item" href="./prestamos.php">Prestamos</a></li>
+                            <li><a class="dropdown-item" href="./prestamos.php">Solicitudes</a></li>
+                            <li><a class="dropdown-item" href="./movimientos.php">Movimientos</a></li>
                             <li><a class="dropdown-item" href="./cuentas_pagadas.php">Cuentas Pagadas</a></li>
                             <li><a class="dropdown-item" href="./pendientes_p_pagar.html">Pendientes por Pagar</a></li>
                             <div class="linear"></div>
