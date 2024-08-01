@@ -140,7 +140,7 @@
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Solicitud</label>
-                                        <input type="number" name="solicitud" class="form-control" value="" id="v_solicitud" oninput="calculo()" placeholder="Ingrese el monto solicitado">
+                                        <input type="number" name="solicitud" class="form-control" value="" id="v_p_solicitud" oninput="calculo_total_porcentaje()" placeholder="Ingrese el monto solicitado">
                                     </div>
 
                                     <div class="mb-3">
@@ -149,23 +149,31 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Renta</label>
-                                        <input type="number" name="renta" class="form-control" id="v_renta" value="12" oninput="calculo()" placeholder="Ingrese su el % sobre renta">
+                                        <label for="recipient-name" class="col-form-label">Porcentaje (%)</label>
+                                        <input type="number" name="porcentaje" class="form-control" id="v_p_renta" value="12" oninput="calculo_total_porcentaje()" placeholder="Ingrese su el % sobre renta">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Comision</label>
+                                        <input type="number" name="comision" class="form-control" id="v_total_renta" placeholder="Se calcula automaticamente..." readonly>
+                                        <input type="hidden" name="" class="form-control" id="v_total_renta" oninput="calculo_total" value="" readonly>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Total a Pagar</label>
-                                        <input type="number" name="total_a_p" class="form-control" id="v_total_a_p" value="">
+                                        <input type="number" name="total_a_p" class="form-control" id="total_general" placeholder="Se calcula automaticamente..." readonly>
+                                        <input type="hidden" name="" class="form-control" id="total_general" oninput="calculo_total_porcentaje()" value="" readonly>
+
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Prima</label>
-                                        <input type="number" name="prima" class="form-control" id="prima" placeholder="Indique su prima base...">
+                                        <input type="number" name="prima" class="form-control" id="v_c_prima" oninput="calculo_total_porcentaje()" placeholder="Indique su prima base...">
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Cuotas</label>
-                                        <input type="number" name="cuotas" class="form-control" id="cuotas" placeholder="Indique el numero de cuotas...">
+                                        <input type="number" name="cuotas" class="form-control" id="total_cuotas" placeholder="Se calcula automaticamente..." readonly>
                                     </div>
 
                                     <div class="mb-3">
@@ -200,7 +208,7 @@
                             <th scope="col">Tlf</th>
                             <th scope="col">Solicitud</th>
                             <th scope="col">Fecha</th>
-                            <th scope="col">Renta</th>
+                            <th scope="col">(%)</th>
                             <th scope="col">Total a Pagar</th>
                             <th scope="col">Prima</th>
                             <th scope="col">Cuotas</th>
@@ -225,7 +233,7 @@
                             <td><?= $datos->tlf?></td>
                             <td><?= $datos->solicitud?></td>
                             <td><?= $datos->date?></td>
-                            <td><?= $datos->renta?></td>
+                            <td><?= $datos->porcentaje?></td>
                             <td><?= $datos->total_a_p?></td>
                             <td><?= $datos->prima?></td>
                             <td><?= $datos->cuotas?></td>
