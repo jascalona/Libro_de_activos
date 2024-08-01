@@ -135,12 +135,12 @@
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Telefono</label>
-                                        <input type="text" name="tlf" class="form-control" id="customer" placeholder="Ingrese numero de Telefono">
+                                        <input type="text" name="tlf" class="form-control" id="tlf" placeholder="Ingrese numero de Telefono">
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Solicitud</label>
-                                        <input type="number" name="solicitud" class="form-control" value="" id="v_p_solicitud" oninput="calculo_total_porcentaje()" placeholder="Ingrese el monto solicitado">
+                                        <input type="number" name="solicitud" class="form-control" id="v_p_solicitud" oninput="calculo_total_porcentaje()" placeholder="Ingrese el monto solicitado">
                                     </div>
 
                                     <div class="mb-3">
@@ -156,7 +156,7 @@
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Comision</label>
                                         <input type="number" name="comision" class="form-control" id="v_total_renta" placeholder="Se calcula automaticamente..." readonly>
-                                        <input type="hidden" name="" class="form-control" id="v_total_renta" oninput="calculo_total" value="" readonly>
+                                        <input type="hidden" name="" class="form-control" id="v_total_renta" oninput="calculo_total" readonly>
                                     </div>
 
                                     <div class="mb-3">
@@ -178,7 +178,7 @@
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Comentarios</label>
-                                        <input type="text" name="message" class="form-control" id="location" placeholder="Escriba aqui...">
+                                        <input type="text" name="message" class="form-control" id="" placeholder="Escriba aqui...">
                                     </div>
 
                                 
