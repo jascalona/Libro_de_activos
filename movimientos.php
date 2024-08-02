@@ -109,7 +109,7 @@
                             <th scope="col">Cuotas</th>
                             <th scope="col">Comentarios</th>
                             <th scope="col">Abonado</th>
-                            <th scope="col">Deuda</th>
+                            <th scope="col">Deuda Pendiente</th>
                             <th scope="col"><i class='bx bx-trash-alt'></i></th>
                             <th scope="col"><i class='bx bxs-edit-alt' ></i></th>
 
@@ -157,7 +157,7 @@
                             </td>
 
                             <td>
-                                <a href=""><i class='bx bx-edit-alt' ></i></a>
+                            <a href="./Controller/prestamos/edit.php?id=<?= $datos->id?>"><i class='bx bx-edit-alt' ></i></a>
                             </td>
 
                         <?php
