@@ -149,8 +149,8 @@
                                 </div>
                             </td>
 
-                            <td></td>
-                            <td></td>
+                            <td><?= $datos->abonados?></td>
+                            <td><?= $datos->d_pendientes?></td>
 
                             <td>
                                 <a href="prestamos.php?id=<?= $datos->id?>"><i class='bx bx-trash-alt'></i></a>
