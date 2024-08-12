@@ -107,7 +107,6 @@
                             <th scope="col">Total a Pagar</th>
                             <th scope="col">Prima</th>
                             <th scope="col">Cuotas</th>
-                            <th scope="col">Comentarios</th>
                             <th scope="col">Abonado</th>
                             <th scope="col">Deuda Pendiente</th>
                             <th scope="col"><i class='bx bx-trash-alt'></i></th>
@@ -136,18 +135,6 @@
                             <td><?= $datos->total_a_p?></td>
                             <td><?= $datos->prima?></td>
                             <td><?= $datos->cuotas?></td>
-
-
-                            <td style="display: flex; justify-content: center;">
-                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                    <i class='bx bxs-message-dots' style='color:#cacaca'></i>
-                                </a>
-                                <div class="collapse" id="collapseExample">
-                                <div class="card card-body">
-                                    <?= $datos->message?>
-                                </div>
-                                </div>
-                            </td>
 
                             <td><?= $datos->abonados?></td>
                             <td><?= $datos->d_pendientes?></td>
