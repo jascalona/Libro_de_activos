@@ -41,10 +41,18 @@
 
                                 <div class="container-form">
 
+                            <?php
+                                include './Controller/modificar_solicitud.php';
+                            
+                            ?>
+
+
                                 <form action="" method="POST">
 
+
+
+
                                 <?php
-                                    include "./Controller/prestamos/modificar_solicitud.php";
 
                                     while($datos=$sql->fetch_object()){ ?>
 
@@ -112,11 +120,10 @@
                                 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="submit" name="btn-e" class="btn btn-primary" value="submit">Cargar Solicitud</button>
+                                <button type="submit" name="edit" class="btn btn-primary" value="submit">Cargar Solicitud</button>
                             </div>
 
-                        </form>
-
+                            </form>
                         </div>
 
 
