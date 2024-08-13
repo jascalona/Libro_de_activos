@@ -39,22 +39,14 @@
 
 
 
-                                <div class="container-form">
+                                <div class="container-form">                                
+                                <?php
+                                    include './modification.php';
 
-                            <?php
-                                include './Controller/modificar_solicitud.php';
-                            
-                            ?>
-
+                                    while($datos=$sql->fetch_object()){ ?>
 
                                 <form action="" method="POST">
 
-
-
-
-                                <?php
-
-                                    while($datos=$sql->fetch_object()){ ?>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Nombre</label>
