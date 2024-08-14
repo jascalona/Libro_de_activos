@@ -21,11 +21,11 @@ if (!empty($_POST['edit'])) {
         $abonados = $_POST['abonados'];
         $d_pendientes = $_POST['d_pendientes'];
 
-        $sql=$conexion->query(" UPDATE prest SET name='$name', surname='$surname', tlf='$tlf', solicitud=$solicitud, date='$date', $porcentaje=$porcentaje, 
-        comision=$comision, total_a_p=$total_a_p, prima=$prima, cuotas=$cuotas, abonados=$abonados, d_pendientes=$d_pendientes WHERE id ");
+        $sql=$conexion->query(" UPDATE prest SET name='$name', surname='$surname', tlf='$tlf', solicitud=$solicitud, date='$date', porcentaje=$porcentaje, 
+        comision=$comision, total_a_p=$total_a_p, prima=$prima, cuotas=$cuotas, abonados=$abonados, d_pendientes=$d_pendientes WHERE id='$id' ");
 
         if ($sql==1) {
-            header('location: ./movimientos.php');
+            header('location: ../movimientos.php');
         } else {
             echo '<script>alert("Ha Ocurrido un Error de Conexion!")</script>';
         }
