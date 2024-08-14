@@ -144,7 +144,7 @@
                             </td>
 
                             <td>
-                            <a href="./edit.php?id=<?=$datos->id?>"><i class='bx bx-edit-alt' ></i></a>
+                            <a href="./Controller/edit.php?id=<?=$datos->id?>"><i class='bx bx-edit-alt' ></i></a>
                             </td>
 
                         <?php

@@ -18,6 +18,7 @@
 
     <!-- STYLE & FRAMEWORKS CSS -->
     <link rel="stylesheet" href="http://localhost/libro_de_compras/Controller/prestamos/edit.css">
+    <link rel="stylesheet" href="./edit.css">
 
     <!-- STYLE & FRAMEWORKS CSS -->
 
@@ -47,6 +48,7 @@
 
                                 <form action="" method="POST">
 
+                                    <input type="hidden" name="id" class="form-control" id="id" placeholder="Ingrese su Nombre" value="<?= $_GET['id']?>">
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Nombre</label>
@@ -100,8 +102,13 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Comentarios</label>
-                                        <input type="text" name="message" class="form-control" id="" placeholder="Escriba aqui..." value="<?= $datos->message?>">
+                                        <label for="recipient-name" class="col-form-label">Abonado</label>
+                                        <input type="number" name="abonados" class="form-control" id="total_cuotas" placeholder="Se calcula automaticamente..." value="<?= $datos->abonados?>">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Pendiente</label>
+                                        <input type="number" name="d_pendientes" class="form-control" id="total_cuotas" placeholder="Se calcula automaticamente..." value="<?= $datos->d_pendientes?>">
                                     </div>
 
                                 <?php
