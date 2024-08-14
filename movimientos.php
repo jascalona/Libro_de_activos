@@ -106,6 +106,7 @@
                             <th scope="col">(%)</th>
                             <th scope="col">Total a Pagar</th>
                             <th scope="col">Prima</th>
+                            <th scope="col">Pagos</th>
                             <th scope="col">Cuotas</th>
                             <th scope="col">Abonado</th>
                             <th scope="col">Deuda Pendiente</th>
@@ -134,8 +135,8 @@
                             <td><?= $datos->porcentaje?></td>
                             <td><?= $datos->total_a_p?></td>
                             <td><?= $datos->prima?></td>
+                            <td><?= $datos->pagos?></td>
                             <td><?= $datos->cuotas?></td>
-
                             <td><?= $datos->abonados?></td>
                             <td><?= $datos->d_pendientes?></td>
 

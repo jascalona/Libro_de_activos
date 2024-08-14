@@ -29,7 +29,7 @@
 
     <!-- BoxIcons -->
      <script src="./JS/Framewrok.js"></script>
-     <script src="./JS/calculo_p.js"></script>
+     <script src="./JS/calculo_m_e.js"></script>
     <!-- BoxIcons -->
 
 
@@ -52,32 +52,32 @@
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Nombre</label>
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su Nombre" value="<?= $datos->name?>">
+                                        <input type="text" name="name" class="form-control" id="name" readonly placeholder="Ingrese su Nombre" value="<?= $datos->name?>">
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Apellido</label>
-                                        <input type="text" name="surname" class="form-control" id="surname" placeholder="Ingrese su Apellido" value="<?= $datos->surname?>" >
+                                        <input type="text" name="surname" class="form-control" id="surname" readonly placeholder="Ingrese su Apellido" value="<?= $datos->surname?>" >
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Telefono</label>
-                                        <input type="text" name="tlf" class="form-control" id="tlf" placeholder="Ingrese numero de Telefono" value="<?= $datos->tlf?>" >
+                                        <input type="text" name="tlf" class="form-control" id="tlf" readonly placeholder="Ingrese numero de Telefono" value="<?= $datos->tlf?>" >
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Solicitud</label>
-                                        <input type="number" name="solicitud" class="form-control" id="v_p_solicitud" oninput="calculo_total_porcentaje()" placeholder="Ingrese el monto solicitado" value="<?= $datos->solicitud?>">
+                                        <input type="number" name="solicitud" class="form-control" id="v_p_solicitud" readonly oninput="calculo_total_porcentaje()" placeholder="Ingrese el monto solicitado" value="<?= $datos->solicitud?>">
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Fecha de Solicitud</label>
-                                        <input type="date" name="date" class="form-control" id="date" value="<?= $datos->date?>">
+                                        <input type="date" name="date" class="form-control" readonly id="date" value="<?= $datos->date?>">
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Porcentaje (%)</label>
-                                        <input type="number" name="porcentaje" class="form-control" id="v_p_renta" value="<?= $datos->porcentaje?>" oninput="calculo_total_porcentaje()" placeholder="Ingrese su el % sobre renta">
+                                        <input type="number" name="porcentaje" class="form-control" readonly id="v_p_renta" value="<?= $datos->porcentaje?>" oninput="calculo_total_porcentaje()" placeholder="Ingrese su el % sobre renta">
                                     </div>
 
                                     <div class="mb-3">
@@ -93,7 +93,12 @@
 
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Prima</label>
-                                        <input type="number" name="prima" class="form-control" id="v_c_prima" oninput="calculo_total_porcentaje()" placeholder="Indique su prima base..." value="<?= $datos->prima?>">
+                                        <input type="number" name="prima" class="form-control" id="v_c_prima" readonly oninput="calculo_total_porcentaje()" placeholder="Indique su prima base..." value="<?= $datos->prima?>">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Pagos</label>
+                                        <input type="number" name="pagos" class="form-control" id="v_c_prima" oninput="calculo_total_porcentaje()"  value="<?= $datos->pagos?>">
                                     </div>
 
                                     <div class="mb-3">

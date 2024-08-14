@@ -17,12 +17,13 @@ if (!empty($_POST['edit'])) {
         $comision = $_POST['comision'];
         $total_a_p = $_POST['total_a_p'];
         $prima = $_POST['prima'];
+        $pagos = $_POST['pagos'];
         $cuotas = $_POST['cuotas'];
         $abonados = $_POST['abonados'];
         $d_pendientes = $_POST['d_pendientes'];
 
         $sql=$conexion->query(" UPDATE prest SET name='$name', surname='$surname', tlf='$tlf', solicitud=$solicitud, date='$date', porcentaje=$porcentaje, 
-        comision=$comision, total_a_p=$total_a_p, prima=$prima, cuotas=$cuotas, abonados=$abonados, d_pendientes=$d_pendientes WHERE id='$id' ");
+        comision=$comision, total_a_p=$total_a_p, prima=$prima, pagos=$pagos, cuotas=$cuotas, abonados=$abonados, d_pendientes=$d_pendientes WHERE id='$id' ");
 
         if ($sql==1) {
             header('location: ../movimientos.php');
