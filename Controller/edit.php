@@ -118,7 +118,7 @@
                                   
                                 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="buttom" class="btn btn-secondary" data-bs-dismiss="modal"><a href="../movimientos.php">Cerrar</button>
                                 <button type="submit" name="edit" class="btn btn-primary" value="submit">Cargar Solicitud</button>
                             </div>
 
